@@ -1,0 +1,13 @@
+d:\TaskDigitalhub\TaskDigitalhub.Domain\bin\Debug\net8.0\TaskDigitalhub.Domain.deps.json
+d:\TaskDigitalhub\TaskDigitalhub.Domain\bin\Debug\net8.0\TaskDigitalhub.Domain.dll
+d:\TaskDigitalhub\TaskDigitalhub.Domain\bin\Debug\net8.0\TaskDigitalhub.Domain.pdb
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.GeneratedMSBuildEditorConfig.editorconfig
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.AssemblyInfoInputs.cache
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.AssemblyInfo.cs
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.csproj.CoreCompileInputs.cache
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.sourcelink.json
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.dll
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\refint\TaskDigitalhub.Domain.dll
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.pdb
+d:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\ref\TaskDigitalhub.Domain.dll
+D:\TaskDigitalhub\TaskDigitalhub.Domain\obj\Debug\net8.0\TaskDigitalhub.Domain.csproj.AssemblyReference.cache

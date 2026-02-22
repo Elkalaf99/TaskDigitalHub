@@ -1,0 +1,27 @@
+using AutoMapper;
+using TaskDigitalhub.Application.Projects.DTOs;
+using TaskDigitalhub.Application.Tasks.DTOs;
+using TaskDigitalhub.Domain.Entities;
+
+namespace TaskDigitalhub.Application.Common.Mapping;
+
+/// <summary>
+/// Entity to DTO mappings for CQRS handlers.
+/// </summary>
+public class MappingProfile : Profile
+{
+    public MappingProfile()
+    {
+        CreateMap<Project, ProjectDto>()
+            .ForMember(d => d.TaskCount, opt => opt.MapFrom(s => s.Tasks.Count));
+
+        CreateMap<Project, CreateProjectDto>();
+        CreateMap<Project, UpdateProjectDto>();
+
+        CreateMap<TaskItem, TaskDto>()
+            .ForMember(d => d.AssignedToUserName, opt => opt.MapFrom(s => s.AssignedToUser != null ? s.AssignedToUser.UserName : null));
+
+        CreateMap<CreateTaskDto, TaskItem>();
+        CreateMap<UpdateTaskDto, TaskItem>();
+    }
+}

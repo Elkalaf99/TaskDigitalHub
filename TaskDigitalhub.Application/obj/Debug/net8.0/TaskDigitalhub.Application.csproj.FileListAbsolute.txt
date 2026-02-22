@@ -1,0 +1,16 @@
+d:\TaskDigitalhub\TaskDigitalhub.Application\bin\Debug\net8.0\TaskDigitalhub.Application.deps.json
+d:\TaskDigitalhub\TaskDigitalhub.Application\bin\Debug\net8.0\TaskDigitalhub.Application.dll
+d:\TaskDigitalhub\TaskDigitalhub.Application\bin\Debug\net8.0\TaskDigitalhub.Application.pdb
+d:\TaskDigitalhub\TaskDigitalhub.Application\bin\Debug\net8.0\TaskDigitalhub.Domain.dll
+d:\TaskDigitalhub\TaskDigitalhub.Application\bin\Debug\net8.0\TaskDigitalhub.Domain.pdb
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.csproj.AssemblyReference.cache
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.GeneratedMSBuildEditorConfig.editorconfig
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.AssemblyInfoInputs.cache
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.AssemblyInfo.cs
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.csproj.CoreCompileInputs.cache
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.sourcelink.json
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigi.41B0238F.Up2Date
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.dll
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\refint\TaskDigitalhub.Application.dll
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\TaskDigitalhub.Application.pdb
+d:\TaskDigitalhub\TaskDigitalhub.Application\obj\Debug\net8.0\ref\TaskDigitalhub.Application.dll

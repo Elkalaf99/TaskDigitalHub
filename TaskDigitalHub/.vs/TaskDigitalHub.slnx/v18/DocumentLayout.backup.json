@@ -1,0 +1,333 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TaskDigitalhub\\TaskDigitalHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\commands\\createprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\commands\\createprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\commands\\deleteprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\commands\\deleteprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\dtos\\updateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\dtos\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\projects\\dtos\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|d:\\taskdigitalhub\\taskdigitalhub\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|solutionrelative:controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|d:\\taskdigitalhub\\taskdigitalhub\\middleware\\validationexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|solutionrelative:middleware\\validationexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\taskdigitalhub.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A496C10-1222-48ED-B64C-EA43E6B15D09}|..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj|d:\\taskdigitalhub\\taskdigitalhub.application\\common\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|d:\\taskdigitalhub\\taskdigitalhub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C68FA1FB-20A8-4D0F-8043-5560D7C692A8}|TaskDigitalHub.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE39D758-3CDB-436B-B343-F429DFD490A1}|..\\TaskDigitalhub.Infrastructure\\TaskDigitalhub.Infrastructure.csproj|d:\\taskdigitalhub\\taskdigitalhub.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07387A-7EC8-4267-8CE8-25821E881754}|..\\TaskDigitalhub.Domain\\TaskDigitalhub.Domain.csproj|d:\\taskdigitalhub\\taskdigitalhub.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07387A-7EC8-4267-8CE8-25821E881754}|..\\TaskDigitalhub.Domain\\TaskDigitalhub.Domain.csproj|d:\\taskdigitalhub\\taskdigitalhub.domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE39D758-3CDB-436B-B343-F429DFD490A1}|..\\TaskDigitalhub.Infrastructure\\TaskDigitalhub.Infrastructure.csproj|d:\\taskdigitalhub\\taskdigitalhub.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 22,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalHub\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectsController.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalHub\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:23:31.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ValidationExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalHub\\Middleware\\ValidationExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\ValidationExceptionMiddleware.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalHub\\Middleware\\ValidationExceptionMiddleware.cs",
+              "RelativeToolTip": "Middleware\\ValidationExceptionMiddleware.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:21:55.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:12:29.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskDigitalhub.Application",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\TaskDigitalhub.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-22T13:10:18.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Common\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Common\\Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Common\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Common\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:09:51.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalHub\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalHub\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-22T12:58:57.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T12:41:17.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T12:41:13.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Domain\\Enums\\UserRole.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T12:41:10.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T12:23:01.503Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 157,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteProjectCommandHandler.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommandHandler.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommandHandler.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:29:25.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteProjectCommand.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommand.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommand.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommand.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\Commands\\DeleteProjectCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:29:23.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateProjectCommandHandler.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommandHandler.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommandHandler.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommandHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:28:05.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateProjectCommand.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommand.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommand.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommand.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\Commands\\CreateProjectCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:27:46.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateProjectDto.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\UpdateProjectDto.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\UpdateProjectDto.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\UpdateProjectDto.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\UpdateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:27:35.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectDto.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\ProjectDto.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\ProjectDto.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\ProjectDto.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\ProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:27:31.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\CreateProjectDto.cs",
+              "ToolTip": "D:\\TaskDigitalhub\\TaskDigitalhub.Application\\Projects\\DTOs\\CreateProjectDto.cs",
+              "RelativeToolTip": "..\\TaskDigitalhub.Application\\Projects\\DTOs\\CreateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:27:26.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
