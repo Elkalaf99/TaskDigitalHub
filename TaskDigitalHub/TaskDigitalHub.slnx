@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../TaskDigitalhub.Application/TaskDigitalhub.Application.csproj" />
+  <Project Path="../TaskDigitalhub.Domain/TaskDigitalhub.Domain.csproj" />
+  <Project Path="../TaskDigitalhub.Infrastructure/TaskDigitalhub.Infrastructure.csproj" />
+  <Project Path="TaskDigitalHub.csproj" />
+</Solution>
