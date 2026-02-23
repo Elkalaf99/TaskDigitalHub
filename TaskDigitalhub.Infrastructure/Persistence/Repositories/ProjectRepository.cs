@@ -25,6 +25,7 @@ public class ProjectRepository : IProjectRepository
     public async Task<Project?> GetByIdWithTasksAsync(int id)
     {
         return await _context.Projects
+            .Include(p => p.ProjectManager)
             .Include(p => p.Tasks)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
@@ -59,6 +60,7 @@ public class ProjectRepository : IProjectRepository
         };
 
         return await query
+            .Include(p => p.ProjectManager)
             .Include(p => p.Tasks)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)

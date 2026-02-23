@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskDigitalhub.Application.Projects.Commands;
 using TaskDigitalhub.Application.Projects.DTOs;
@@ -8,6 +9,7 @@ namespace TaskDigitalHub.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize(Policy = "Authenticated")]
 public class ProjectsController : ControllerBase
 {
     private readonly IMediator _mediator;

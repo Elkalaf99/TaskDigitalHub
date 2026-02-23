@@ -13,7 +13,8 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         CreateMap<Project, ProjectDto>()
-            .ForMember(d => d.TaskCount, opt => opt.MapFrom(s => s.Tasks.Count));
+            .ForMember(d => d.TaskCount, opt => opt.MapFrom(s => s.Tasks.Count))
+            .ForMember(d => d.ProjectManagerName, opt => opt.MapFrom(s => s.ProjectManager != null ? s.ProjectManager.UserName : null));
 
         CreateMap<Project, CreateProjectDto>();
         CreateMap<Project, UpdateProjectDto>();

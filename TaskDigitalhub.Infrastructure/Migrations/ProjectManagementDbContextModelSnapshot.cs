@@ -45,6 +45,9 @@ namespace TaskDigitalhub.Infrastructure.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<int?>("ProjectManagerId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
@@ -52,6 +55,8 @@ namespace TaskDigitalhub.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProjectManagerId");
 
                     b.ToTable("Projects");
                 });
@@ -129,6 +134,16 @@ namespace TaskDigitalhub.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TaskDigitalhub.Domain.Entities.Project", b =>
+                {
+                    b.HasOne("TaskDigitalhub.Domain.Entities.User", "ProjectManager")
+                        .WithMany("ManagedProjects")
+                        .HasForeignKey("ProjectManagerId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("ProjectManager");
+                });
+
             modelBuilder.Entity("TaskDigitalhub.Domain.Entities.TaskItem", b =>
                 {
                     b.HasOne("TaskDigitalhub.Domain.Entities.User", "AssignedToUser")
@@ -156,6 +171,8 @@ namespace TaskDigitalhub.Infrastructure.Migrations
             modelBuilder.Entity("TaskDigitalhub.Domain.Entities.User", b =>
                 {
                     b.Navigation("AssignedTasks");
+
+                    b.Navigation("ManagedProjects");
                 });
 #pragma warning restore 612, 618
         }

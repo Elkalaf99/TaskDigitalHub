@@ -21,6 +21,11 @@ namespace TaskDigitalhub.Infrastructure.Persistence.Configurations
             builder.Property(p => p.Budget)
                 .HasPrecision(18, 2);
 
+            builder.HasOne(p => p.ProjectManager)
+                .WithMany(u => u.ManagedProjects)
+                .HasForeignKey(p => p.ProjectManagerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             builder.HasMany(p => p.Tasks)
                 .WithOne(t => t.Project)
                 .HasForeignKey(t => t.ProjectId)

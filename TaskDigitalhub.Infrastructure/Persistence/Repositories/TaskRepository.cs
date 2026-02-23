@@ -61,6 +61,17 @@ public class TaskRepository : ITaskRepository
             .CountAsync(t => t.ProjectId == projectId);
     }
 
+    public async Task<IReadOnlyList<TaskItem>> GetOverdueTasksAsync()
+    {
+        var today = DateTime.UtcNow.Date;
+        return await _context.Tasks
+            .AsNoTracking()
+            .Where(t => t.DueDate < today && t.Status != Domain.Enums.TaskStatus.Completed)
+            .Include(t => t.AssignedToUser)
+            .Include(t => t.Project)
+            .ToListAsync();
+    }
+
     public async Task<TaskItem> AddAsync(TaskItem task)
     {
         await _context.Tasks.AddAsync(task);

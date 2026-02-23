@@ -4,8 +4,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using TaskDigitalHub.Middleware;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using TaskDigitalHub.Services;
 using TaskDigitalhub.Application;
+using TaskDigitalhub.Application.Common.Interfaces;
+using TaskDigitalHub.Hubs;
 using TaskDigitalhub.Infrastructure;
+using TaskDigitalhub.Infrastructure.Jobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +21,17 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
+                    context.Token = accessToken;
+                return Task.CompletedTask;
+            }
+        };
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
@@ -30,7 +45,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("ProjectManagerOrAdmin", policy => policy.RequireRole("Admin", "ProjectManager"));
+    options.AddPolicy("Authenticated", policy => policy.RequireAuthenticatedUser());
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -54,6 +77,7 @@ builder.Services.AddSwaggerGen(c =>
 
 // SignalR - for real-time task updates
 builder.Services.AddSignalR();
+builder.Services.AddScoped<ITasksHubClient, TasksHubNotificationService>();
 
 var app = builder.Build();
 
@@ -72,5 +96,12 @@ app.UseMiddleware<ValidationExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHub<TasksHub>("/hubs/tasks");
+
+// Hangfire Recurring Job - daily overdue tasks email notification
+RecurringJob.AddOrUpdate<OverdueTasksNotificationJob>(
+    "overdue-tasks-notification",
+    job => job.ExecuteAsync(),
+    Cron.Daily);
 
 app.Run();

@@ -5,7 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TaskDigitalhub.Application.Common.Interfaces;
 using TaskDigitalhub.Infrastructure.Persistence;
+using TaskDigitalhub.Infrastructure.Jobs;
 using TaskDigitalhub.Infrastructure.Persistence.Repositories;
+using TaskDigitalhub.Infrastructure.Services;
 
 namespace TaskDigitalhub.Infrastructure;
 
@@ -23,6 +25,12 @@ public static class DependencyInjection
         services.AddScoped<IProjectRepository, ProjectRepository>();
         services.AddScoped<ITaskRepository, TaskRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<IJwtService, JwtService>();
+        services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
+        services.AddSingleton<ICacheService, CacheService>();
+        services.AddScoped<IEmailService, SmtpEmailService>();
+        services.AddScoped<OverdueTasksNotificationJob>();
 
         services.AddHangfire(config => config
             .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)

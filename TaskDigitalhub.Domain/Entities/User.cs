@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,5 +20,6 @@ namespace TaskDigitalhub.Domain.Entities
         public UserRole Role { get; set; }
 
         public ICollection<TaskItem> AssignedTasks { get; set; } = new List<TaskItem>();
+        public ICollection<Project> ManagedProjects { get; set; } = new List<Project>();
     }
 }

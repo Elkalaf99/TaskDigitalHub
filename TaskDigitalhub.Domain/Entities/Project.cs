@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +22,9 @@ namespace TaskDigitalhub.Domain.Entities
         public ProjectStatus Status { get; set; }
 
         public decimal Budget { get; set; }
+
+        public int? ProjectManagerId { get; set; }
+        public User? ProjectManager { get; set; }
 
         public ICollection<TaskItem> Tasks { get; set; } = new List<TaskItem>();
     }

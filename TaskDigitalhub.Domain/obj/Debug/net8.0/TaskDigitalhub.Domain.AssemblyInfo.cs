@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskDigitalhub.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce65cef813fff5128d7e4d7f896056de98f49545")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70c2cd347b6955a341db29acc77715b6114f6815")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskDigitalhub.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskDigitalhub.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

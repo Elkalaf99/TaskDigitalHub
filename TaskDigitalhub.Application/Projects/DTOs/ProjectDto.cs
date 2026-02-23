@@ -11,5 +11,7 @@ public record ProjectDto
     public DateTime EndDate { get; init; }
     public ProjectStatus Status { get; init; }
     public decimal Budget { get; init; }
+    public int? ProjectManagerId { get; init; }
+    public string? ProjectManagerName { get; init; }
     public int TaskCount { get; init; }
 }

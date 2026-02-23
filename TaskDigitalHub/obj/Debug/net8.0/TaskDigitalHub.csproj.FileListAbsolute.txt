@@ -176,4 +176,5 @@ d:\TaskDigitalhub\TaskDigitalHub\obj\Debug\net8.0\TaskDigitalHub.genruntimeconfi
 d:\TaskDigitalhub\TaskDigitalHub\obj\Debug\net8.0\ref\TaskDigitalHub.dll
 D:\TaskDigitalhub\TaskDigitalHub\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 D:\TaskDigitalhub\TaskDigitalHub\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+d:\TaskDigitalhub\TaskDigitalHub\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\TaskDigitalhub\TaskDigitalHub\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
