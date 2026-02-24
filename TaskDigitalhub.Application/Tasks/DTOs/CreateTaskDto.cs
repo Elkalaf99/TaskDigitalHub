@@ -2,13 +2,13 @@ using TaskDigitalhub.Domain.Enums;
 
 namespace TaskDigitalhub.Application.Tasks.DTOs;
 
-public record CreateTaskDto
+public class CreateTaskDto
 {
-    public int ProjectId { get; init; }
-    public string Title { get; init; } = string.Empty;
-    public string? Description { get; init; }
-    public int AssignedToUserId { get; init; }
-    public TaskPriority Priority { get; init; }
-    public DateTime DueDate { get; init; }
-    public TaskDigitalhub.Domain.Enums.TaskStatus Status { get; init; }
+    public int ProjectId { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public int AssignedToUserId { get; set; }
+    public TaskPriority Priority { get; set; }
+    public DateTime DueDate { get; set; }
+    public TaskDigitalhub.Domain.Enums.TaskStatus Status { get; set; }
 }

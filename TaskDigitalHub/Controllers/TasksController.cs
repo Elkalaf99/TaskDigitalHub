@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using TaskDigitalhub.Application.Tasks.Commands;
 using TaskDigitalhub.Application.Tasks.DTOs;
 using TaskDigitalhub.Application.Tasks.Queries;
-using TaskStatusEnum = TaskDigitalhub.Domain.Enums.TaskStatus;
 
 namespace TaskDigitalHub.Controllers;
 
@@ -69,5 +68,3 @@ public class TasksController : ControllerBase
         return Ok(new { UpdatedCount = updated });
     }
 }
-
-public record BulkStatusUpdateRequest(IReadOnlyList<int> TaskIds, TaskStatusEnum NewStatus);

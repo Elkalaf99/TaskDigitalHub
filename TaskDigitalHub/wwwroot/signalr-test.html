@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Test - TaskDigitalHub</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; }
+        input, button { margin: 5px; padding: 8px; }
+        button { cursor: pointer; background: #0078d4; color: white; border: none; border-radius: 4px; }
+        button:hover { background: #106ebe; }
+        #log { background: #1e1e1e; color: #d4d4d4; padding: 15px; margin-top: 15px; border-radius: 4px; font-family: monospace; font-size: 12px; max-height: 300px; overflow-y: auto; }
+        .success { color: #4ec9b0; }
+        .error { color: #f48771; }
+        .info { color: #9cdcfe; }
+    </style>
+</head>
+<body>
+    <h2>اختبار SignalR - TaskDigitalHub</h2>
+    
+    <div>
+        <label>رابط الـ API:</label><br>
+        <input type="text" id="baseUrl" value="https://localhost:7109" style="width: 100%;">
+    </div>
+    <div>
+        <label>JWT Token (من /api/auth/login):</label><br>
+        <input type="password" id="token" placeholder="الصق التوكن هنا" style="width: 100%;">
+    </div>
+    <div>
+        <label>Project ID (للانضمام للمجموعة):</label><br>
+        <input type="number" id="projectId" value="1" style="width: 100px;">
+    </div>
+    
+    <div style="margin-top: 15px;">
+        <button onclick="connect()">اتصال</button>
+        <button onclick="joinProjectGroup()">انضمام لمجموعة المهام (Project)</button>
+        <button onclick="joinProjectsGroup()">انضمام لمجموعة المشاريع</button>
+        <button onclick="disconnect()">قطع الاتصال</button>
+    </div>
+    
+    <h3>السجل:</h3>
+    <div id="log"></div>
+
+    <script>
+        let connection = null;
+
+        function log(msg, type = 'info') {
+            const el = document.getElementById('log');
+            const time = new Date().toLocaleTimeString('ar-EG');
+            el.innerHTML += `<span class="${type}">[${time}] ${msg}</span><br>`;
+            el.scrollTop = el.scrollHeight;
+        }
+
+        function connect() {
+            const baseUrl = document.getElementById('baseUrl').value.trim();
+            const token = document.getElementById('token').value.trim();
+            
+            if (!token) {
+                log('أدخل JWT Token أولاً!', 'error');
+                return;
+            }
+
+            const url = baseUrl + '/hubs/tasks?access_token=' + encodeURIComponent(token);
+            
+            connection = new signalR.HubConnectionBuilder()
+                .withUrl(url)
+                .withAutomaticReconnect()
+                .build();
+
+            connection.on('TaskCreated', (taskJson) => {
+                log('TaskCreated: ' + taskJson, 'success');
+            });
+            connection.on('TaskUpdated', (taskJson) => {
+                log('TaskUpdated: ' + taskJson, 'success');
+            });
+            connection.on('TaskDeleted', (taskId) => {
+                log('TaskDeleted - Task ID: ' + taskId, 'success');
+            });
+            connection.on('ProjectCreated', (projectJson) => {
+                log('ProjectCreated: ' + projectJson, 'success');
+            });
+            connection.on('ProjectUpdated', (projectJson) => {
+                log('ProjectUpdated: ' + projectJson, 'success');
+            });
+            connection.on('ProjectDeleted', (projectId) => {
+                log('ProjectDeleted - Project ID: ' + projectId, 'success');
+            });
+
+            connection.start()
+                .then(() => log('تم الاتصال بنجاح!', 'success'))
+                .catch(err => log('خطأ في الاتصال: ' + err, 'error'));
+        }
+
+        function joinProjectGroup() {
+            if (!connection || connection.state !== signalR.HubConnectionState.Connected) {
+                log('اتصل أولاً!', 'error');
+                return;
+            }
+            const projectId = parseInt(document.getElementById('projectId').value) || 1;
+            connection.invoke('JoinProjectGroup', projectId)
+                .then(() => log('انضممت لمجموعة المهام (Project ' + projectId + ')', 'success'))
+                .catch(err => log('خطأ: ' + err, 'error'));
+        }
+
+        function joinProjectsGroup() {
+            if (!connection || connection.state !== signalR.HubConnectionState.Connected) {
+                log('اتصل أولاً!', 'error');
+                return;
+            }
+            connection.invoke('JoinProjectsGroup')
+                .then(() => log('انضممت لمجموعة المشاريع (قائمة المشاريع)', 'success'))
+                .catch(err => log('خطأ: ' + err, 'error'));
+        }
+
+        function disconnect() {
+            if (connection) {
+                connection.stop();
+                log('تم قطع الاتصال', 'info');
+            }
+        }
+    </script>
+</body>
+</html>

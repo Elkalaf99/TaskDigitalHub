@@ -13,13 +13,15 @@ public class UpdateProjectCommandHandler : IRequestHandler<UpdateProjectCommand,
     private readonly IMapper _mapper;
     private readonly ICurrentUserService _currentUser;
     private readonly ICacheService _cache;
+    private readonly IProjectsHubClient _projectsHub;
 
-    public UpdateProjectCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ICurrentUserService currentUser, ICacheService cache)
+    public UpdateProjectCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ICurrentUserService currentUser, ICacheService cache, IProjectsHubClient projectsHub)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _currentUser = currentUser;
         _cache = cache;
+        _projectsHub = projectsHub;
     }
 
     public async Task<ProjectDto?> Handle(UpdateProjectCommand request, CancellationToken cancellationToken)
@@ -31,18 +33,29 @@ public class UpdateProjectCommandHandler : IRequestHandler<UpdateProjectCommand,
         if (!_currentUser.IsAdmin && (_currentUser.Role != UserRole.ProjectManager || project.ProjectManagerId != _currentUser.UserId))
             throw new ForbiddenException();
 
+        var projectManagerId = request.Dto.ProjectManagerId;
+        if (projectManagerId.HasValue && projectManagerId.Value > 0)
+        {
+            var user = await _unitOfWork.Users.GetByIdAsync(projectManagerId.Value);
+            if (user == null)
+                throw new BadRequestException($"ProjectManager with Id {projectManagerId} does not exist. Please use a valid user ID or omit ProjectManagerId.");
+        }
+
         project.Name = request.Dto.Name;
         project.Description = request.Dto.Description;
         project.StartDate = request.Dto.StartDate;
         project.EndDate = request.Dto.EndDate;
         project.Status = request.Dto.Status;
         project.Budget = request.Dto.Budget;
-        project.ProjectManagerId = request.Dto.ProjectManagerId;
+        project.ProjectManagerId = projectManagerId is > 0 ? projectManagerId : null;
 
         _unitOfWork.Projects.Update(project);
         await _unitOfWork.SaveChangesAsync();
 
         _cache.Remove($"project:{request.Id}");
-        return _mapper.Map<ProjectDto>(project);
+        var updated = await _unitOfWork.Projects.GetByIdWithTasksAsync(request.Id);
+        var dto = _mapper.Map<ProjectDto>(updated ?? project);
+        await _projectsHub.ProjectUpdated(System.Text.Json.JsonSerializer.Serialize(dto));
+        return dto;
     }
 }

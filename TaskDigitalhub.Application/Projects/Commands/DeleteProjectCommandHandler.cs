@@ -10,12 +10,14 @@ public class DeleteProjectCommandHandler : IRequestHandler<DeleteProjectCommand,
     private readonly IUnitOfWork _unitOfWork;
     private readonly ICurrentUserService _currentUser;
     private readonly ICacheService _cache;
+    private readonly IProjectsHubClient _projectsHub;
 
-    public DeleteProjectCommandHandler(IUnitOfWork unitOfWork, ICurrentUserService currentUser, ICacheService cache)
+    public DeleteProjectCommandHandler(IUnitOfWork unitOfWork, ICurrentUserService currentUser, ICacheService cache, IProjectsHubClient projectsHub)
     {
         _unitOfWork = unitOfWork;
         _currentUser = currentUser;
         _cache = cache;
+        _projectsHub = projectsHub;
     }
 
     public async Task<bool> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
@@ -27,9 +29,11 @@ public class DeleteProjectCommandHandler : IRequestHandler<DeleteProjectCommand,
         if (!_currentUser.IsAdmin && (_currentUser.Role != UserRole.ProjectManager || project.ProjectManagerId != _currentUser.UserId))
             throw new ForbiddenException();
 
+        var projectId = project.Id;
         _unitOfWork.Projects.Delete(project);
         await _unitOfWork.SaveChangesAsync();
-        _cache.Remove($"project:{request.Id}");
+        _cache.Remove($"project:{projectId}");
+        await _projectsHub.ProjectDeleted(projectId);
         return true;
     }
 }

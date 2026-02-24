@@ -46,5 +46,14 @@ public class ValidationExceptionMiddleware
             await context.Response.WriteAsync(
                 JsonSerializer.Serialize(response, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
         }
+        catch (BadRequestException ex)
+        {
+            _logger.LogWarning(ex, "Bad request");
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            context.Response.ContentType = "application/json";
+            var response = new { error = ex.Message };
+            await context.Response.WriteAsync(
+                JsonSerializer.Serialize(response, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
+        }
     }
 }
