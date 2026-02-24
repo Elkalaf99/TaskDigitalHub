@@ -3,10 +3,7 @@ using MediatR;
 
 namespace TaskDigitalhub.Application.Common.Behaviors;
 
-/// <summary>
-/// MediatR pipeline behavior - validates requests before handler execution.
-/// Guideline #5: Error Handling - validate inputs, fail gracefully.
-/// </summary>
+
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {

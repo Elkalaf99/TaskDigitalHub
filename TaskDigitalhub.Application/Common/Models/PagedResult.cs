@@ -1,8 +1,6 @@
 namespace TaskDigitalhub.Application.Common.Models;
 
-/// <summary>
-/// Generic paged result wrapper for API responses.
-/// </summary>
+
 public class PagedResult<T>
 {
     public IReadOnlyList<T> Items { get; init; } = [];

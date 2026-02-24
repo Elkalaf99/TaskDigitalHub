@@ -2,9 +2,6 @@ using TaskDigitalhub.Domain.Entities;
 
 namespace TaskDigitalhub.Application.Common.Interfaces;
 
-/// <summary>
-/// Repository for User entity - abstracts data access.
-/// </summary>
 public interface IUserRepository
 {
     Task<User?> GetByIdAsync(int id);

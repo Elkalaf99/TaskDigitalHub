@@ -2,10 +2,7 @@ using TaskDigitalhub.Domain.Entities;
 
 namespace TaskDigitalhub.Application.Common.Interfaces;
 
-/// <summary>
-/// Repository for Project entity - abstracts data access.
-/// Guideline #3: Maximize cohesion - groups all project data access.
-/// </summary>
+
 public interface IProjectRepository
 {
     Task<Project?> GetByIdAsync(int id);

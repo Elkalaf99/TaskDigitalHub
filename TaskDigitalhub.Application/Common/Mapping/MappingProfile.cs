@@ -5,9 +5,7 @@ using TaskDigitalhub.Domain.Entities;
 
 namespace TaskDigitalhub.Application.Common.Mapping;
 
-/// <summary>
-/// Entity to DTO mappings for CQRS handlers.
-/// </summary>
+
 public class MappingProfile : Profile
 {
     public MappingProfile()
